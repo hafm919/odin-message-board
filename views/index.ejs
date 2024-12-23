@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message Board</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header" class="flex bg-green-950 justify-center font-bold">
+      <h1 class="text-slate-100 text-5xl font-ral p-4">Messages Board</h1>
+    </div>
+    <div id="message-container">
+      <button class="border-2 w-full p-3"><a href="/new">Add New</a></button>
+      <% messages.forEach((message) => { %> <%- include('messagecard', {message:
+      message}); %> <% }); %>
+    </div>
+  </body>
+</html>
